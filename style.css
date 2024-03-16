@@ -1,0 +1,98 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+#orderButton {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#orderButton:hover {
+  background-color: #e68a00;
+}
+
+#foodItems {
+  margin-top: 20px;
+}
+
+#foodItems input[type="checkbox"] {
+  display: none;
+}
+
+#foodItems label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#foodItems label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #666;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+#foodItems input[type="checkbox"]:checked + label::before {
+  background-color: #ff9900;
+  border-color: #ff9900;
+}
+
+#foodItems label::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 20px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#foodItems input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}
+
+#foodImageContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#foodImageContainer img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.5);
+}
+
+#orderId {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #ff6600;
+  display: none;
+}
